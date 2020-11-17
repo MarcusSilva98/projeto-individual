@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="./JS/index.js"></script>
+</head>
+
+<body>
+    <div class="container_all">
+        <header>
+
+            <div>
+                <a href="#" class="logo"> <span>Fit</span>ness</a>
+            </div>
+        </header>
+
+
+
+
+        <div class="banner">
+            <video src="./VIDEO/bg.mp4" autoplay muted loop type="mp4"></video>
+            <div class="txt_inicial">
+                <h2>More Than Fitness</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptatibus, ea dignissimos dolorem commodi dolor est doloremque! Dolorum blanditiis, ratione nemo assumenda dolore unde ea. Exercitationem corrupti error optio voluptates!
+                </p>
+
+                <a href="#">Read More</a>
+            </div>
+            <div class="imgBox">
+                <img src="./IMAGES/man.png" alt="">
+            </div>
+            <ul class="icon">
+                <li>
+                    <a href=""><img src="./IMAGES/facebook.png" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="./IMAGES/instagram.png" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="./IMAGES/twitter.png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="login">
+            <div class="container-form">
+
+                <form class="formulario" id="form_login" method="post" onsubmit="return entrar()">
+                    <label for="email">Email</label>
+                    <input type="email" title="Email válido: usuário@dominio.com" required minlength="4" name="login" id="email">
+                    <label for="senha">Password</label>
+                    <input type="password" required minlength="4" name="senha" id="senha">
+                    <button type="submit" id="sign_in">Sign in</button>
+                    <p class="clique_aqui">Não tem uma conta? <a onclick="sign_up()">Clique aqui</a> </p>
+
+                </form>
+
+                <!-- tela de login -->
+
+                <div class="imagem_esquerda" id="img_esquerda">
+                    <img class="img2" src="./IMAGES/homem.jpg" alt="">
+                </div>
+
+
+                <!-- divisão dumbell -->
+                <div class="divisao">
+                    <hr>
+                    <img class="dumbell" src="./IMAGES/dumbell.png" alt="">
+                    <hr>
+                </div>
+                <!-- divisão dumbell -->
+
+
+
+
+
+                <!-- imagem login -->
+
+                <div class="imagem_direita" id="img_direita">
+                    <img class="img1" src="./IMAGES/run.jpg" alt="">
+                </div>
+                <!-- imagem login -->
+
+
+
+
+
+
+                <!-- tela de CADASTRO -->
+
+                <form class="formulario-cadastro" id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                    <label for="nome ">Nome completo</label>
+                    <input type="text" name="nome" id="nome" required minlength="4">
+
+                    <label for="email ">Email</label>
+                    <input type="email" title="Email válido: usuário@dominio.com" name="login" id="email_cadastro" required minlength="4">
+
+                    <label for="senha">Password</label>
+                    <input type="password" name="senha" id="senha_cadastro" required minlength="4">
+
+                    <label for="confirm ">Confirm password</label>
+                    <input type="password" name="confirm " id="confirm" required minlength="4">
+
+
+
+                    <button class="botao_cadastro ">Cadastre-se</button>
+                    <p class="clique_aqui2 ">Já possui uma conta? <a onclick="sign_in() ">Clique aqui</a> </p>
+                </form>
+
+
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>

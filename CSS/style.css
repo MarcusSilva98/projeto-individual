@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+header .logo {
+    position: relative;
+    font-size: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header .logo span {
+    color: orangered;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    background: #111;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    right: 100px;
+    top: 0;
+    width: 450px;
+    height: 100%;
+    background: orangered;
+    transform-origin: top;
+    transform: skewX(-25deg);
+    z-index: 1;
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.banner .txt_inicial {
+    position: relative;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.banner .txt_inicial h2 {
+    color: #fff;
+    font-size: 50px;
+}
+
+.banner .txt_inicial p {
+    color: #fff;
+    font-size: 20px;
+    margin: 5px 0 25px;
+}
+
+.banner .txt_inicial a {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    color: #111;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.banner .imgBox {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    z-index: 2;
+}
+
+.banner .imgBox img {
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    height: 88%;
+    z-index: 10000;
+}
+
+.icon {
+    position: absolute;
+    bottom: 20px;
+    letter-spacing: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon li {
+    list-style: none;
+}
+
+.icon li a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.icon li a img {
+    transform: scale(0.5);
+    filter: invert(1);
+}
+
+.login {
+    height: 100vh;
+    width: 99.1vw;
+    background-image: url('../IMAGES/gym.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+.container-form {
+    margin-top: 100px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.94);
+    border: solid 3px orangered;
+    display: flex;
+    width: 55vw;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 50%;
+    animation-name: anm_img;
+    animation-duration: 3s;
+}
+
+.img2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 50%;
+    animation-name: anm_img;
+    animation-duration: 3s;
+}
+
+@keyframes anm_img {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 50%;
+    }
+}
+
+.formulario {
+    display: block;
+    width: 90%;
+    margin-left: 55px;
+    animation-name: anm_formulario;
+    animation-duration: 2s;
+}
+
+@keyframes anm_formulario {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+.formulario label {
+    font-size: 35px;
+    color: white;
+    font-family: 'Saira', sans-serif;
+    margin-right: 90px;
+}
+
+.formulario input {
+    margin-top: 4px;
+    font-size: 17px;
+    border: solid white;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    width: 280px;
+    padding: 2px 2px 2px 4px;
+    outline: none;
+}
+
+.container-form .clique_aqui {
+    font-family: 'Saira', sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    transform: translateY(80px);
+}
+
+.formulario button {
+    margin-top: 70px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-family: 'Saira', sans-serif;
+    font-size: 28px;
+    box-shadow: 0 0 25px black inset;
+    border-radius: 100px;
+    transition-duration: 500ms;
+    width: 60%;
+    margin-left: 20px;
+}
+
+.formulario button:hover {
+    color: white;
+    background-color: black;
+    border-color: 20px solid white;
+    box-shadow: 0 0 10px white inset;
+    cursor: pointer;
+}
+
+.formulario a {
+    color: orangered;
+    cursor: pointer;
+}
+
+form a:active {
+    color: white;
+}
+
+.imagem_direita {
+    height: 100%;
+    width: 100%;
+}
+
+.formulario-cadastro {
+    display: none;
+    flex-direction: column;
+    font-family: 'Saira', sans-serif;
+    margin: 4px 20px 4px 50px;
+    animation-name: anm_formulario_cadastro;
+    animation-duration: 2s;
+}
+
+@keyframes anm_formulario_cadastro {
+    0% {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+.formulario-cadastro label {
+    font-size: 15px;
+    color: white;
+    font-family: 'Saira', sans-serif;
+    margin-right: 80px;
+}
+
+.formulario-cadastro input {
+    margin: 4px;
+    font-size: 17px;
+    border: solid white;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    width: 280px;
+    padding: 2px 2px 2px 4px;
+    outline: none;
+    margin-right: 110px;
+}
+
+.botao_cadastro {
+    margin-top: 60px;
+    background-color: black;
+    color: white;
+    font-family: 'Saira', sans-serif;
+    font-size: 28px;
+    border: none;
+    box-shadow: 0 0 10px white inset;
+    border-radius: 100px;
+    transition-duration: 500ms;
+    width: 60%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.formulario-cadastro .botao_cadastro:hover {
+    color: black;
+    background-color: white;
+    border-color: 3px solid black;
+    box-shadow: 0 0 10px black inset;
+    cursor: pointer;
+}
+
+.formulario-cadastro a {
+    color: orangered;
+    cursor: pointer;
+}
+
+.formulario-cadastro a:active {
+    color: white;
+}
+
+.imagem_esquerda {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.divisao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divisao hr {
+    width: 2px;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: orangered;
+}
+
+.divisao img {
+    align-items: center;
+    height: 30px;
+    width: 50px;
+}
