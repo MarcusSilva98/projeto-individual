@@ -6,33 +6,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 100px;
-    z-index: 1000;
-}
-
-header .logo {
-    position: relative;
-    font-size: 50px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-header .logo span {
-    color: orangered;
-}
-
 .banner {
     position: relative;
     width: 100%;
@@ -48,9 +21,9 @@ header .logo span {
     content: '';
     position: absolute;
     right: 100px;
-    top: 0;
-    width: 450px;
-    height: 100%;
+    bottom: 0;
+    width: 440px;
+    height: 92%;
     background: orangered;
     transform-origin: top;
     transform: skewX(-25deg);
