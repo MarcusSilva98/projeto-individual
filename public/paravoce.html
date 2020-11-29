@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/imc.css">
+    <title>De olho na saúde</title>
+</head>
+
+<body>
+    <div class="container_imc">
+        <div class="box_imc">
+            <span>
+            O IMC (Índice de Massa Corporal) é uma ferramenta usada para detectar casos de obesidade ou desnutrição, principalmente em estudos que envolvem grandes populações.
+        </span>
+            <div class="calc_imc">
+                Calculadora IMC
+            </div>
+
+            <div class="input_imc">
+                Digite seu peso: <input type="text" required placeholder="Kg" id="peso_usuario">
+                <div id="error_peso">
+
+                </div>
+
+                Altura: <input type="text" required placeholder="Ex 1.70" id="altura_usuario">
+                <div id="error_altura">
+
+                </div>
+                <input type="submit" onclick="calcular()" class="btn_calcular" value="Caulcular IMC">
+            </div>
+            <span id="resultado_imc"></span>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function calcular() {
+        error_peso.innerHTML = '';
+        error_altura.innerHTML = '';
+        var peso = Number(peso_usuario.value);
+
+        var altura_com_virgula = altura_usuario.value;
+
+        var altura = Number(altura_com_virgula.replace(',', '.'));
+
+        var imc = (peso / (altura * altura));
+
+        if (peso == 0 && altura == 0) {
+            error_peso.innerHTML = `Preenchimento obrigatório`;
+            error_altura.innerHTML = `Preenchimento obrigatório`;
+        } else if (peso == 0) {
+            error_peso.innerHTML = `Preenchimento obrigatório`;
+        } else if (altura == 0) {
+            error_altura.innerHTML = `Preenchimento obrigatório`;
+
+        } else if (altura >= 3) {
+            error_altura.innerHTML = `Por favor não se esqueça da vírgula`;
+        } else {
+
+            if (imc < 17.2 && peso < 55.7) {
+                resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)}, classificação: Magreza`;
+            }
+            if (imc > 17.2 && imc < 24.6 && peso > 55.6 && peso < 79.5) {
+                resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)},classificação: Normal`;
+            }
+            if (imc > 24.6 && imc < 28 && peso > 79.5 && peso < 90.7) {
+                resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)},classificação: Sobrepeso`;
+            } else {
+                resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)},classificação: Obesidade`;
+            }
+
+        }
+    }
+</script>
