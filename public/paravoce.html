@@ -5,73 +5,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/imc.css">
+    <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/imc.js"></script>
     <title>De olho na saúde</title>
 </head>
 
 <body>
+    <header class="container_menu">
+        <nav>
+            <h1 class="fitness"><a href="index.html"><span>Fit</span>ness</a></h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="formulario.html">Login</a></li>
+                <li><a href="#">Sobre mim</a></li>
+                <li><a href="paravoce.html">Para você</a></li>
+                <li><a href="#">Contact</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
     <div class="container_imc">
         <div class="box_imc">
-            <span>
-            O IMC (Índice de Massa Corporal) é uma ferramenta usada para detectar casos de obesidade ou desnutrição, principalmente em estudos que envolvem grandes populações.
-        </span>
-            <div class="calc_imc">
-                Calculadora IMC
-            </div>
-
-            <div class="input_imc">
-                Digite seu peso: <input type="text" required placeholder="Kg" id="peso_usuario">
-                <div id="error_peso">
-
+            <span class="txt_imc">
+                    O IMC (Índice de Massa Corporal) é uma ferramenta usada para detectar casos de obesidade ou desnutrição, principalmente em estudos que envolvem grandes populações.
+            </span>
+            <div class="box_input">
+                <div class="calc_imc">
+                    Calculadora IMC
                 </div>
 
-                Altura: <input type="text" required placeholder="Ex 1.70" id="altura_usuario">
-                <div id="error_altura">
 
+                <div class="input_imc">
+
+
+                    <span>Idade</span>
+                    <div class="input_idade"> <input type="text" required placeholder="25" id="idade_usuario">
+                    </div>
+                    <span class="input_peso">Digite seu peso:</span> <input type="text" required placeholder="Kg" id="peso_usuario">
+                    <div id="error_peso">
+
+                    </div>
+
+                    <span class="input_altura">Altura:</span> <input type="text" required placeholder="Ex 1.70" id="altura_usuario">
+                    <div id="error_altura">
+
+                    </div>
+                    <button type="submit" onclick="calcular()" class="btn_calcular">Calcular IMC</button>
                 </div>
-                <input type="submit" onclick="calcular()" class="btn_calcular" value="Caulcular IMC">
             </div>
-            <span id="resultado_imc"></span>
+
+
+
+            <div id="resultado_imc"></div>
         </div>
+        <table class="tabela">
+            <thead>
+                <tr class="linha_titulo">
+                    <th>Condição</th>
+                    <th>IMC</th>
+                    <th>PESO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="magreza" class="linha_body">
+                    <td>Magreza</td>
+                    <td> Menor que 18.5</td>
+                    <td>Menor que 56.7 kg</td>
+                </tr>
+                <tr id="normal">
+                    <td>Normal</td>
+                    <td>18.5 a 24.9</td>
+                    <td>56.7 a 76.3 Kg</td>
+                </tr>
+                <tr id="sobrepeso">
+                    <td>Sobrepeso</td>
+                    <td>24.9 a 30 </td>
+                    <td>76.3 a 91.9 Kg
+                    </td>
+                </tr>
+                <tr id="obesidade">
+                    <td>Obesidade</td>
+                    <td> Maior que 30 </td>
+                    <td> Maior que 91.9 Kg
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
 </html>
 <script>
-    function calcular() {
-        error_peso.innerHTML = '';
-        error_altura.innerHTML = '';
-        var peso = Number(peso_usuario.value);
-
-        var altura_com_virgula = altura_usuario.value;
-
-        var altura = Number(altura_com_virgula.replace(',', '.'));
-
-        var imc = (peso / (altura * altura));
-
-        if (peso == 0 && altura == 0) {
-            error_peso.innerHTML = `Preenchimento obrigatório`;
-            error_altura.innerHTML = `Preenchimento obrigatório`;
-        } else if (peso == 0) {
-            error_peso.innerHTML = `Preenchimento obrigatório`;
-        } else if (altura == 0) {
-            error_altura.innerHTML = `Preenchimento obrigatório`;
-
-        } else if (altura >= 3) {
-            error_altura.innerHTML = `Por favor não se esqueça da vírgula`;
-        } else {
-
-            if (imc < 17.2 && peso < 55.7) {
-                resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)}, classificação: Magreza`;
-            }
-            if (imc > 17.2 && imc < 24.6 && peso > 55.6 && peso < 79.5) {
-                resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)},classificação: Normal`;
-            }
-            if (imc > 24.6 && imc < 28 && peso > 79.5 && peso < 90.7) {
-                resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)},classificação: Sobrepeso`;
-            } else {
-                resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)},classificação: Obesidade`;
-            }
-
-        }
-    }
 </script>
