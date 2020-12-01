@@ -4,6 +4,7 @@ body {
     color: #ffffff;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    overflow-y: hidden;
 }
 
 .container_imc {
@@ -14,6 +15,18 @@ body {
     flex-direction: column;
     font-weight: 500;
     width: 99vw;
+    animation: anm_entrada 1s;
+}
+
+@keyframes anm_entrada {
+    from {
+        opacity: 0%;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0%);
+    }
 }
 
 .box_imc {
@@ -77,9 +90,35 @@ body {
     font-size: 13.5px;
 }
 
+#resultado_imc {
+    animation: entrada_mensagem 1s;
+}
+
+@keyframes entrada_mensagem {
+    from {
+        opacity: 0%;
+    }
+    30% {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
 .tabela {
     border-spacing: 30px;
     border-collapse: collapse;
+    animation: entrada_tabela 1s;
+}
+
+@keyframes entrada_tabela {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
 }
 
 .tabela th {

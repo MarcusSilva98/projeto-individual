@@ -1,3 +1,5 @@
+const { combineTableNames } = require("sequelize/types/lib/utils");
+
 function calcular() {
     error_peso.innerHTML = '';
     error_altura.innerHTML = '';
@@ -21,17 +23,28 @@ function calcular() {
         error_altura.innerHTML = `Por favor não se esqueça da vírgula`;
     } else {
 
-        if (imc < 18.5 && peso < 64) {
+        tabela.style.display = 'block'
+
+        magreza.style.backgroundColor = "black";
+        normal.style.backgroundColor = "black"
+        sobrepeso.style.backgroundColor = "black"
+        obesidade.style.backgroundColor = "black"
+
+
+        if (imc < 18.5 && peso < 56.7) {
             resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)}, classificação: Magreza`;
-        }
-        if (imc > 18.5 && imc < 24.9 && peso > 64.6 && peso < 86.1) {
+            magreza.style.backgroundColor = "#DAA520";
+        } else if (imc > 18.5 && imc < 24.9 && peso > 56.7 && peso < 76.3) {
             resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)},classificação: Normal`;
-        }
-        if (imc > 24.9 && imc < 30 && peso > 86.1 && peso < 103.8) {
+            normal.style.backgroundColor = "green"
+        } else if (imc > 24.9 && imc < 30 && peso > 76.3 && peso < 91.9) {
             resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)},classificação: Sobrepeso`;
+            sobrepeso.style.backgroundColor = "#FF8C00"
         } else {
             resultado_imc.innerHTML = `Seu imc é de ${parseInt(imc)},classificação: Obesidade`;
+            obesidade.style.backgroundColor = "red"
         }
 
+        resultado_imc.style.display = 'block';
     }
 }

@@ -15,7 +15,64 @@
     height: 50vh;
     border-radius: 20px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.979) inset;
+    animation: fade;
+    animation-duration: 0.5s;
+    overflow: hidden;
 }
+
+
+/* APARIÇÃO DO FORM LOGIN */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* APARIÇÃO DO FORM LOGIN */
+
+.box_login h2 {
+    animation: move 0.3s;
+}
+
+.inputBox:nth-child(1) {
+    animation: move 0.6s;
+}
+
+.box_login .inputBox:nth-child(2) {
+    animation: move 0.85s;
+}
+
+.box_login .inputBox:nth-child(3) {
+    animation: move 1s;
+}
+
+
+/* APARIÇÃO DOS CAMPOS ESQUERDA PARA DIREITA */
+
+@keyframes move {
+    from {
+        opacity: 0;
+        transform: translateX(-35%);
+    }
+    30% {
+        opacity: 0;
+        transform: translateX(-35%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+/* APARIÇÃO DOS CAMPOS ESQUERDA PARA DIREITA */
 
 .box_login h2 {
     color: black;
@@ -97,14 +154,6 @@
 
 /* C A D A S T R O */
 
-.container_login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #111111;
-}
-
 .box_cadastro {
     position: relative;
     padding: 70px 40px;
@@ -112,7 +161,64 @@
     height: 58vh;
     border-radius: 20px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.979) inset;
+    animation: fade_cadastro;
+    animation-duration: 0.5s;
+    overflow: hidden;
 }
+
+
+/* APARIÇÃO DO FORM LOGIN */
+
+@keyframes fade_cadastro {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* APARIÇÃO DO FORM LOGIN */
+
+.box_cadastro h2 {
+    animation: move_cadastro 0.3s;
+}
+
+.inputBox_cadastro:nth-child(1) {
+    animation: move_cadastro 0.6s;
+}
+
+.box_cadastro .inputBox_cadastro:nth-child(2) {
+    animation: move_cadastro 0.85s;
+}
+
+.box_cadastro .inputBox_cadastro:nth-child(3) {
+    animation: move_cadastro 1s;
+}
+
+
+/* APARIÇÃO DOS CAMPOS DIREITA PARA ESQUERDA */
+
+@keyframes move_cadastro {
+    from {
+        opacity: 0;
+        transform: translateX(35%);
+    }
+    30% {
+        opacity: 0;
+        transform: translateX(35%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+/* APARIÇÃO DOS CAMPOS DIREITA PARA ESQUERDA */
 
 .box_cadastro h2 {
     color: black;
@@ -122,18 +228,18 @@
     border-left: 5px solid rgb(255, 69, 1);
 }
 
-.box_cadastro .inputBox {
+.box_cadastro .inputBox_cadastro {
     position: relative;
     width: 300px;
     height: 50px;
     margin-bottom: 35px;
 }
 
-.box_cadastro .inputBox:last-child {
+.box_cadastro .inputBox_cadastro:last-child {
     margin-bottom: 0;
 }
 
-.box_cadastro .inputBox input {
+.box_cadastro .inputBox_cadastro input {
     position: absolute;
     top: 0;
     left: 0;
@@ -146,7 +252,7 @@
     font-size: 16px;
 }
 
-.box_cadastro .inputBox span {
+.box_cadastro .inputBox_cadastro span {
     position: absolute;
     top: 1px;
     left: 1px;
@@ -159,13 +265,13 @@
     pointer-events: none;
 }
 
-.box_cadastro .inputBox input:focus~span,
-.box_cadastro .inputBox input:valid~span {
+.box_cadastro .inputBox_cadastro input:focus~span,
+.box_cadastro .inputBox_cadastro input:valid~span {
     transform: translateX(-10px) translateY(-32px);
     font-size: 13.5px;
 }
 
-.box_cadastro .inputBox input[type="submit"] {
+.box_cadastro .inputBox_cadastro input[type="submit"] {
     background: rgb(65, 115, 253);
     color: white;
     border: none;
@@ -174,7 +280,7 @@
     font-weight: 500;
 }
 
-.box_cadastro .inputBox input[type="submit"]:hover {
+.box_cadastro .inputBox_cadastro input[type="submit"]:hover {
     background: rgba(255, 68, 0, 0.904);
     color: black;
 }
