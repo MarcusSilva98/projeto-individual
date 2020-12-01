@@ -23,7 +23,7 @@ function entrar() {
                 sessionStorage.login_usuario_meuapp = json.login;
                 sessionStorage.nome_usuario_meuapp = json.nome;
 
-                window.location.href = 'card-2-dieta.html';
+                window.location.href = 'paravoce.html';
             });
 
         } else {

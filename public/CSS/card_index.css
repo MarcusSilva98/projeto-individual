@@ -1,0 +1,99 @@
+    .container_topicos {
+        background-color: rgb(10, 10, 10);
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 99vw;
+        height: 100%;
+        font-size: 15px;
+    }
+    
+    .box_topicos {
+        border-radius: 8px;
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+    
+    .topico_1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 56vw;
+    }
+    
+    .texto_topico_1 {
+        font-size: 1.5vw;
+    }
+    
+    .texto_topico_1 h2 {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding-bottom: 5%;
+        font-size: 2vw;
+    }
+    
+    .topico_1 h4 {
+        padding-bottom: 3%;
+    }
+    
+    .topico_1 span b {
+        color: rgb(218, 83, 5);
+    }
+    
+    .topico_1 span p {
+        font-size: 18.5px;
+        padding-bottom: 2.5%;
+    }
+    
+    .topico_1 span {
+        width: 54vw;
+        text-align: justify;
+        padding: 8px 15px;
+        border-radius: 10px;
+    }
+    
+    .texto_topico_2 h2 {
+        font-size: 30px;
+    }
+    
+    .texto_topico_2 b {
+        font-size: 20px;
+    }
+    
+    .texto_topico_2 p {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    
+    .topico_2 {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .topico_2 h2 {
+        padding: 30px 0px;
+    }
+    
+    .topico_2 span {
+        border-radius: 10px;
+        width: 50%;
+    }
+    
+    .saiba_mais {
+        font-size: 17px;
+    }
+    
+    .link_cadastro {
+        text-decoration: none;
+        cursor: pointer;
+        color: rgb(250, 223, 102);
+        transition: 200ms;
+    }
+    
+    .link_cadastro:hover {
+        font-size: 19px;
+    }
